@@ -1,10 +1,17 @@
 # Bundle Starter
 
-This bundle contains everything you need to start creating your own Selene bundles:
+This bundle acts as a basic template for getting started with creating your own Selene bundles.
 
-- `bundle.lua` defines all entrypoints for your bundle. You should give your bundle a unique id and name here. Ideally, your bundle id should match its folder name.
-- Any assets or resource definitions handled by Godot should be placed inside the `untitled-bundle` folder. You should rename this folder to something that is unique to your bundle, to avoid asset conflicts with other bundles. Ideally, just rename it to your bundle id.
-- Server-side only scripts should be placed inside the `server` folder, which prevents them from being included in the client bundle.
+## Setup
+
+1. Rename `untitled-bundle` to a unique name for your bundle, containing only lowercase letters, numbers, and dashes or underscores.
+2. Set a name for your bundle in `bundle.lua`.
+
+## Structure
+
+- `bundle.lua` defines the manifest for your bundle. Here you also specify any client or server scripts that should be loaded.
+- Assets and resource definitions should be placed inside the `untitled-bundle` (or whatever you renamed it to) folder.
+- Server-side only scripts should be placed inside the `server` folder. They will not be sent to connecting clients.
 - UI or other client-side scripts should be placed inside the `client` folder.
 
 ## Exporting
